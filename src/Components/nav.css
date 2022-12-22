@@ -1,0 +1,43 @@
+.header {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    padding: 11px;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    object-fit: contain;
+    width: 130px;
+}
+
+.header__links {
+    display: flex;
+
+    gap: 15px;
+}
+
+.header_linktag {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    padding-inline: 15px;
+}
+
+.header__user {
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (max-width:1000px) {
+    .header__links {
+        display: none;
+    }
+
+}
