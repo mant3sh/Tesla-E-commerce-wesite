@@ -28,11 +28,21 @@
     font-weight: 500;
     padding: 10px;
     padding-inline: 15px;
+    border-radius: 12px;
+}
+
+.header_linktag:hover {
+    background-color: rgba(244, 244, 244, 0.2);
+    color: #171a20;
+
+
+
 }
 
 .header__user {
     display: flex;
     gap: 15px;
+    margin-right: 10px;
 }
 
 @media screen and (max-width:1000px) {

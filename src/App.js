@@ -1,11 +1,16 @@
 import "./App.css";
 import Homepage from "./Components/Homepage";
 import Nav from "./Components/Nav";
+import Menu from "./Components/Menu";
+
+import { useState } from "react";
 
 function App() {
+  const [menu, setMenu] = useState(false);
   return (
     <div className="App">
-      <Nav />
+      <Nav menu={menu} setMenu={setMenu} />
+      {menu && <Menu menu={menu} setMenu={setMenu} />}
       <div className="container">
         <div className="section">
           <Homepage title="Model 3" image="model3.jpeg" />
