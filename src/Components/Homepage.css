@@ -14,6 +14,7 @@
     top: 16vh;
     right: 0px;
     left: 0px;
+    min-height: 200px;
 }
 
 .page__title>a {

@@ -1,10 +1,11 @@
 import React from "react";
 import "./nav.css";
+import { Link } from "react-router-dom";
 
 function Nav({ menu, setMenu }) {
   return (
     <div className="header">
-      <div className="header__logo">
+      <Link to="/" className="header__logo">
         <svg
           className="tds-icon tds-icon-close tds-modal-close-icon"
           viewBox="0 0 342 35"
@@ -15,20 +16,20 @@ function Nav({ menu, setMenu }) {
             fill="currentColor"
           />
         </svg>
-      </div>
+      </Link>
       <div className="header__links">
-        <a href="#" className="header_linktag">
+        <Link to="/modelS" className="header_linktag">
           Model S
-        </a>
-        <a href="#" className="header_linktag">
+        </Link>
+        <Link to="/Model3" className="header_linktag">
           Model 3
-        </a>
-        <a href="#" className="header_linktag">
+        </Link>
+        <Link to="/ModelX" className="header_linktag">
           Model X
-        </a>
-        <a href="#" className="header_linktag">
+        </Link>
+        <Link to="/ModelY" className="header_linktag">
           Model Y
-        </a>
+        </Link>
         <a href="#" className="header_linktag">
           Solar Roof
         </a>

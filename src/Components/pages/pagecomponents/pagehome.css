@@ -1,0 +1,72 @@
+.carpagehome {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.carTitle {
+    position: absolute;
+    top: 18vh;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+
+}
+
+.carTitle>h1 {
+    font-size: 2.5rem;
+}
+
+.carTitle>p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.carSpec {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    padding-inline: 10px;
+    background-image: linear-gradient(180deg, transparent, rgba(26, 26, 26, 0.61), #000);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    vertical-align: bottom;
+    gap: 30px;
+}
+
+.carSpec>div {
+    color: white;
+}
+
+.carSpecbox>h1 {
+    color: white;
+    font-size: 1.8rem;
+
+}
+
+.carSpecbox>p {
+    color: white;
+}
+
+.carbuynowdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.carbuynow {
+    text-decoration: none;
+    border: 3px solid white;
+    color: white;
+    padding-block: 5px;
+    border-radius: 4px;
+    padding-inline: 50px;
+    font-weight: 600;
+    font-size: large;
+}

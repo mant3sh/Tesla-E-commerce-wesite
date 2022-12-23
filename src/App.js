@@ -1,9 +1,13 @@
 import "./App.css";
-import Homepage from "./Components/Homepage";
+import { Route, Routes } from "react-router-dom";
 import Nav from "./Components/Nav";
 import Menu from "./Components/Menu";
-
 import { useState } from "react";
+import Mainpage from "./Mainpage";
+import Models from "./Components/pages/Models";
+import Model3 from "./Components/pages/Model3";
+import Modelx from "./Components/pages/Modelx";
+import Modely from "./Components/pages/Modely";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -11,39 +15,13 @@ function App() {
     <div className="App">
       <Nav menu={menu} setMenu={setMenu} />
       {menu && <Menu menu={menu} setMenu={setMenu} />}
-      <div className="container">
-        <div className="section">
-          <Homepage title="Model 3" image="model3.jpeg" />
-        </div>
-        <div className="section">
-          <Homepage title="Model Y" image="modely.jpeg" />
-        </div>
-        <div className="section">
-          <Homepage title="Model S" image="models.jpeg" />
-        </div>
-        <div className="section">
-          <Homepage title="Model X" image="modelx.jpeg" />
-        </div>
-        <div className="section">
-          <Homepage
-            title="Solar Panels"
-            image="solarpannel.jpeg"
-            notcar
-            des="Lowest Cost Pannels in America"
-          />
-        </div>
-        <div className="section">
-          <Homepage
-            title="Solar Roof"
-            notcar
-            des="Produce Clean Energy From your Roof"
-            image="solarroof.jpeg"
-          />
-        </div>
-        <div className="section">
-          <Homepage title="Accesssories" notcar image="accessories.jpeg" acc />
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Mainpage />} />
+        <Route path="/ModelS" element={<Models />} />
+        <Route path="/Model3" element={<Model3 />} />
+        <Route path="/ModelX" element={<Modelx />} />
+        <Route path="/modelY" element={<Modely />} />
+      </Routes>
     </div>
   );
 }
