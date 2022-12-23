@@ -1,4 +1,5 @@
 import React from "react";
+import PageFooter from "./pagecomponents/PageFooter";
 import PageHome from "./pagecomponents/PageHome";
 
 function Models() {
@@ -13,6 +14,7 @@ function Models() {
         topspeed="200"
         peakpower="1,020"
       />
+      <PageFooter image="modelspage/modelsfooter" model={"S"} />
     </div>
   );
 }

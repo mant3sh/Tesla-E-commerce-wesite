@@ -1,6 +1,6 @@
 import React from "react";
 import PageHome from "./pagecomponents/PageHome";
-
+import PageFooter from "./pagecomponents/PageFooter";
 function Model3() {
   return (
     <div>
@@ -13,6 +13,9 @@ function Model3() {
         peakpower="283"
         topspeed="162"
       />
+      <div>
+        <PageFooter image="model3page/model3footer" model="3" />
+      </div>
     </div>
   );
 }

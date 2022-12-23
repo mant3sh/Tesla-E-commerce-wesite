@@ -8,7 +8,7 @@ function PageHome({ title, image, model, range, pickup, topspeed, peakpower }) {
       className="carpagehome"
       style={{
         backgroundImage: `url('/images/${image}.jpeg')`,
-        width: "100vw",
+        width: "100%",
         height: "100vh",
       }}
     >

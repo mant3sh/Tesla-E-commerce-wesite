@@ -1,4 +1,5 @@
 import React from "react";
+import PageFooter from "./pagecomponents/PageFooter";
 import PageHome from "./pagecomponents/PageHome";
 
 function Modely() {
@@ -13,6 +14,10 @@ function Modely() {
         peakpower={"600"}
         topspeed="155"
       />
+
+      <div>
+        <PageFooter image={"modelypage/modelyfooter"} model="Y" />
+      </div>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import PageFooter from "./pagecomponents/PageFooter";
 import PageHome from "./pagecomponents/PageHome";
 
 function Modelx() {
@@ -13,6 +14,9 @@ function Modelx() {
         peakpower="1,020"
         topspeed={"163"}
       />
+      <div>
+        <PageFooter image={"modelxpage/modelxfooter"} model="X" />
+      </div>
     </div>
   );
 }
