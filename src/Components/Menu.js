@@ -1,15 +1,14 @@
 import React from "react";
 import "./menu.css";
+import { Link } from "react-router-dom";
 
 function Menu({ menu, setMenu }) {
+  const closemenu = () => {
+    setMenu(!menu);
+  };
   return (
     <div className="menu">
-      <div
-        onClick={() => {
-          setMenu(!menu);
-        }}
-        className="close_buttn"
-      >
+      <div onClick={closemenu} className="close_buttn">
         <svg
           className="tds-icon tds-icon-close tds-modal-close-icon"
           viewBox="0 0 24 24"
@@ -21,7 +20,20 @@ function Menu({ menu, setMenu }) {
           />
         </svg>
       </div>
-      Menu
+      <div className="menu_content">
+        <Link onClick={closemenu} className="menu_links" to="/Model3">
+          Model 3
+        </Link>
+        <Link onClick={closemenu} className="menu_links" to="/ModelS">
+          Model S
+        </Link>
+        <Link onClick={closemenu} className="menu_links" to="/ModelY">
+          Model Y
+        </Link>
+        <Link onClick={closemenu} className="menu_links" to="/ModelX">
+          Model X
+        </Link>
+      </div>
     </div>
   );
 }
