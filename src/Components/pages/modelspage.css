@@ -1,0 +1,21 @@
+.modelsinterior {
+    width: 100%;
+    background-image: url("/public/images/modelspage/modelsinterior.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.interior_des {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.des_text {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
