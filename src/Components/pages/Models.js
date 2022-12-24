@@ -3,6 +3,8 @@ import PageFooter from "./pagecomponents/PageFooter";
 import PageHome from "./pagecomponents/PageHome";
 import "./modelspage.css";
 import { Fade } from "react-awesome-reveal";
+import Pageorder from "./pagecomponents/Pageorder";
+import Autopliot from "./pagecomponents/Autopliot";
 
 function Models() {
   return (
@@ -23,7 +25,17 @@ function Models() {
           </Fade>
         </div>
       </div>
-
+      <Pageorder
+        title={"Beyond Ludicrous"}
+        model="Plaid"
+        des="Model S Plaid has the quickest acceleration of any vehicle in production. Updated battery architecture for all Model S trims enables back-to-back track runs without performance degradation. Chat with a Tesla Advisor to learn more about Model S or schedule a demo drive today."
+      />
+      <Autopliot />
+      <Pageorder
+        model="Autopilot"
+        title={"Future of Driving"}
+        des="Autopilot enables your car to steer, accelerate and brake automatically within its lane under your active supervision, assisting with the most burdensome parts of driving. With over-the-air software updates, the latest enhancements are available instantly. Chat with a Tesla Advisor to learn more about Model S or schedule a demo drive today."
+      />
       <PageFooter image="modelspage/modelsfooter" model={"S"} />
     </div>
   );
