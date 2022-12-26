@@ -15,7 +15,13 @@ function PageHome({ title, image, model, range, pickup, topspeed, peakpower }) {
       <div className="carTitle">
         <Fade cascade duration={600} direction="up" fraction={`0`}>
           <h1>{title}</h1>
-          <p>{model}</p>
+          <p
+            style={{
+              color: "#171a20",
+            }}
+          >
+            {model}
+          </p>
         </Fade>
       </div>
 

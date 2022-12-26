@@ -13,7 +13,17 @@ function Homepage({ title, image, notcar, des, acc }) {
       <div className="page__title">
         <Fade cascade direction="up" duration={700} fraction={`0`}>
           <h1>{title}</h1>
-          {notcar ? <p>{des}</p> : <a href="#">Schedule a Test Drive</a>}
+          {notcar ? (
+            <p
+              style={{
+                color: "black",
+              }}
+            >
+              {des}
+            </p>
+          ) : (
+            <a href="#">Schedule a Test Drive</a>
+          )}
         </Fade>
       </div>
 

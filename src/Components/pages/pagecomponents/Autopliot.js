@@ -9,22 +9,65 @@ function Autopliot() {
         <Fade triggerOnce cascade fraction={"0"} duration="600" direction="up">
           <h1>360°</h1>
           <br />
-          <p>Rear, side and forward-facing cameras</p>
-          <p>provide maximum visibility</p>
+          <p
+            style={{
+              color: "#171a20",
+            }}
+          >
+            Rear, side and forward-facing cameras
+          </p>
+          <p
+            style={{
+              color: "#171a20",
+            }}
+          >
+            provide maximum visibility
+          </p>
         </Fade>
       </div>
       <div>
         <Fade triggerOnce cascade fraction={"0"} duration="600" direction="up">
           <h1>250 m</h1>
-          <p>Powerful visual processing at up to 250</p>
-          <p> meters of range</p>
+          <p
+            style={{
+              color: "#171a20",
+            }}
+          >
+            Powerful visual processing at up to 250
+          </p>
+          <p
+            style={{
+              color: "#171a20",
+            }}
+          >
+            {" "}
+            meters of range
+          </p>
         </Fade>
       </div>
       <div>
         <Fade triggerOnce cascade fraction={"0"} duration="600" direction="up">
-          <p>Tesla Vision detects nearby cars, helps</p>
-          <p>prevent potential collisions and assists</p>
-          <p>with parking</p>
+          <p
+            style={{
+              color: "#171a20",
+            }}
+          >
+            Tesla Vision detects nearby cars, helps
+          </p>
+          <p
+            style={{
+              color: "#171a20",
+            }}
+          >
+            prevent potential collisions and assists
+          </p>
+          <p
+            style={{
+              color: "#171a20",
+            }}
+          >
+            with parking
+          </p>
         </Fade>
       </div>
     </div>
