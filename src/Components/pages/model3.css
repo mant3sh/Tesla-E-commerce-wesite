@@ -1,0 +1,39 @@
+.model3interior {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/public/images/model3page/model3interior.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.model3_awd {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/public/images/model3page/model3awd.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+}
+
+.model3awddes {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    text-align: center;
+}
+
+.model3safty {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/public/images/model3page/model3safety.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
