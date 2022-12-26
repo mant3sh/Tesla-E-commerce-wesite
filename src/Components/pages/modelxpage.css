@@ -1,0 +1,19 @@
+.modelxutility {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url("/public//images/modelxpage/mxutlity.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.modelx_utlity_des {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 60px;
+}
