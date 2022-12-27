@@ -8,6 +8,7 @@ import Models from "./Components/pages/Models";
 import Model3 from "./Components/pages/Model3";
 import Modelx from "./Components/pages/Modelx";
 import Modely from "./Components/pages/Modely";
+import Login from "./Components/pages/lo/Login";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Model3" element={<Model3 />} />
         <Route path="/ModelX" element={<Modelx />} />
         <Route path="/modelY" element={<Modely />} />
+        <Route path="/signin" element={<Login />} />
       </Routes>
     </div>
   );
