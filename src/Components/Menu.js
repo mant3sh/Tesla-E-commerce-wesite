@@ -33,6 +33,9 @@ function Menu({ menu, setMenu }) {
         <Link onClick={closemenu} className="menu_links" to="/ModelX">
           Model X
         </Link>
+        <Link onClick={closemenu} className="menu_links" to="/signin">
+          Account
+        </Link>
       </div>
     </div>
   );

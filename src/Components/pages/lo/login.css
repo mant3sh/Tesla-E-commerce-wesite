@@ -11,8 +11,10 @@
 .login_box {
     flex: 1;
     margin-top: 150px;
-    width: 50vw;
+    width: 500px;
 }
+
+
 
 .label {
     color: #5c5e62;
@@ -73,4 +75,27 @@
     text-decoration: none;
     font-size: small;
     font-weight: 500;
+}
+
+.signin_with_google {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 5px;
+    gap: 10px;
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 4px;
+    color: #393c41;
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+
+@media (max-width:500px) {
+    .login_box {
+        width: 80vw;
+    }
+
 }
