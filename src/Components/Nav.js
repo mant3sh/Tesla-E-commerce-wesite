@@ -30,10 +30,10 @@ function Nav({ menu, setMenu }) {
         <Link to="/ModelY" className="header_linktag">
           Model Y
         </Link>
-        <a href="#" className="header_linktag">
+        <a href="#solarRoof" className="header_linktag">
           Solar Roof
         </a>
-        <a href="#" className="header_linktag">
+        <a href="#solarPannel" className="header_linktag">
           Solar Pannels
         </a>
       </div>

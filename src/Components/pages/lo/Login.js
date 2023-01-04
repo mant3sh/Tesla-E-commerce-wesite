@@ -1,16 +1,50 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AccountService } from "../../../service/accountService";
+import { logout } from "../../../redux/slices/user";
+import { useDispatch, useSelector } from "react-redux";
 
 function Login() {
+  const user = useSelector((state) => state.user);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const handelSignin = async (e) => {
+    e.preventDefault();
+    try {
+      const login = await AccountService.login(email, password);
+    } catch (error) {
+      console.log(error);
+    }
+    setEmail("");
+    setPassword("");
+  };
+  const handelGoogleSignin = () => {
+    try {
+      AccountService.googleSignin();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    if (user) {
+      navigate("/account");
+    }
+  }, [user]);
+
+  const handelLogout = () => {
+    AccountService.logout();
+    dispatch(logout());
+  };
+
   return (
     <>
       <div className="Login">
         <div className="login_box">
           <h2 className="label">Email</h2>
-          <form>
+          <form onSubmit={handelSignin}>
             <input
               required
               className="login_deatils"
@@ -42,7 +76,7 @@ function Login() {
           <hr />
           <br />
           <br />
-          <button className="signin_with_google">
+          <button onClick={handelGoogleSignin} className="signin_with_google">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 48 48"
@@ -68,10 +102,11 @@ function Login() {
             </svg>{" "}
             Sign in with Google
           </button>
-          <Link className="Signup_buttn" to="/signin">
+          <Link className="Signup_buttn" to="/signup">
             Create Account
           </Link>
         </div>
+        <button onClick={handelLogout}> logout</button>
 
         <div className="loginfooter">
           <a href="#">Tesla 2022</a>

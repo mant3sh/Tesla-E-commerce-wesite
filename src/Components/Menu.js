@@ -33,7 +33,7 @@ function Menu({ menu, setMenu }) {
         <Link onClick={closemenu} className="menu_links" to="/ModelX">
           Model X
         </Link>
-        <Link onClick={closemenu} className="menu_links" to="/signin">
+        <Link onClick={closemenu} className="menu_links" to="/account">
           Account
         </Link>
       </div>

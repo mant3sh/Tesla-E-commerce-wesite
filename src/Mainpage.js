@@ -17,7 +17,7 @@ function Mainpage() {
       <div className="section">
         <Homepage title="Model X" image="modelx.jpeg" />
       </div>
-      <div className="section">
+      <div id="solarPannel" className="section">
         <Homepage
           title="Solar Panels"
           image="solarpannel.jpeg"
@@ -25,7 +25,7 @@ function Mainpage() {
           des="Lowest Cost Pannels in America"
         />
       </div>
-      <div className="section">
+      <div id="solarRoof" className="section">
         <Homepage
           title="Solar Roof"
           notcar
