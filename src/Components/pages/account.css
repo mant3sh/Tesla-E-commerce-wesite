@@ -1,0 +1,39 @@
+.Account__page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+
+.AccountPage__container {
+    width: 800px;
+}
+
+.AccountPage__nav {
+    display: flex;
+    width: 100%;
+    padding-inline: 10px;
+    padding-block: 5px;
+    justify-content: space-between;
+}
+
+.Accountpage__navleft {
+    display: flex;
+    gap: 10px;
+}
+
+.links_nested {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 500;
+    color: #171a20;
+
+}
+
+@media (max-width:400px) {
+    .AccountPage__container {
+        width: 98%;
+    }
+
+}

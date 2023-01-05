@@ -34,11 +34,6 @@ function Login() {
     }
   }, [user]);
 
-  const handelLogout = () => {
-    AccountService.logout();
-    dispatch(logout());
-  };
-
   return (
     <>
       <div className="Login">
@@ -106,7 +101,6 @@ function Login() {
             Create Account
           </Link>
         </div>
-        <button onClick={handelLogout}> logout</button>
 
         <div className="loginfooter">
           <a href="#">Tesla 2022</a>

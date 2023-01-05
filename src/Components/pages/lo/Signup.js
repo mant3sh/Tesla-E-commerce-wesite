@@ -1,21 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AccountService } from "../../../service/accountService";
 import { auth } from "../../../firebaseconfig";
+import { useSelector } from "react-redux";
 
 function Signup() {
+  const user = useSelector((state) => state.user);
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const handelSignup = async (e) => {
     e.preventDefault();
     try {
-      const newuser = await AccountService.signup(email, password);
+      const newuser = await AccountService.signup(email, password).catch(
+        (error) => window.alert(error)
+      );
       AccountService.updateName(name);
     } catch (err) {
       console.log(err);
     }
   };
+  useEffect(() => {
+    if (user) {
+      navigate("/account");
+    }
+  }, [user]);
   return (
     <div>
       <>

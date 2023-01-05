@@ -15,6 +15,9 @@ import { login } from "./redux/slices/user";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebaseconfig";
 import Account from "./Components/pages/Account";
+import Cartorder from "./Components/pages/pagecomponents/Cartorder";
+import Trackorder from "./Components/pages/pagecomponents/Trackorder";
+import Myaccount from "./Components/pages/pagecomponents/Myaccount";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -49,7 +52,12 @@ function App() {
         <Route path="/modelY" element={<Modely />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/account" element={<Account />} />
+        <Route path="/account" element={<Account />}>
+          <Route index element={<Cartorder />} />
+          <Route path="cartorder" element={<Cartorder />} />
+          <Route path="trackorder" element={<Trackorder />} />
+          <Route path="myaccount" element={<Myaccount />} />
+        </Route>
       </Routes>
     </div>
   );
