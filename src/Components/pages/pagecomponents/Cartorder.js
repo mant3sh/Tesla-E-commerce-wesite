@@ -8,6 +8,7 @@ import {
   addAddon,
 } from "../../../redux/slices/cartSlice";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 function Cartorder() {
   const [car, setCar] = useState(null);
   const navigate = useNavigate();
@@ -28,6 +29,16 @@ function Cartorder() {
     setCar(null);
     setModel(null);
     setcolor(null);
+    toast.success("Wow your car is in stock", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
   const handelRemove = () => {
     dispatch(removeFromCart());

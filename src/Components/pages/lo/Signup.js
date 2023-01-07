@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AccountService } from "../../../service/accountService";
-import { auth } from "../../../firebaseconfig";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 function Signup() {
   const user = useSelector((state) => state.user);
@@ -17,6 +17,16 @@ function Signup() {
         (error) => window.alert(error)
       );
       AccountService.updateName(name);
+      toast.success("Success your account is created", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } catch (err) {
       console.log(err);
     }
