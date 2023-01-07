@@ -1,0 +1,45 @@
+.order__card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cancel__order {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ordercard__des {}
+
+.text__black {
+    color: inherit;
+}
+
+.red__buttn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.confrim__ask {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.des__order {
+    gap: 20px;
+    display: flex;
+}
+
+.blue {
+    color: green;
+}

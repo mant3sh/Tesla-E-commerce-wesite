@@ -1,5 +1,6 @@
 import React from "react";
 import "./pagefooter.css";
+import { Link } from "react-router-dom";
 function PageFooter({ image, model }) {
   return (
     <div className="pagefooter">
@@ -7,13 +8,13 @@ function PageFooter({ image, model }) {
         <div className="orderdel">
           <h2>Order Model {model}</h2>
           <br />
-          <a href="#" className="footerbuynow">
+          <Link to="/account" className="footerbuynow">
             Buy Now
-          </a>
+          </Link>
           <br />
-          <a href="#" className="footercustomorder">
+          <Link to="/account" className="footercustomorder">
             Custom Order
-          </a>
+          </Link>
         </div>
         <img
           className="orderimg"

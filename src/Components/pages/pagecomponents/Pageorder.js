@@ -1,6 +1,7 @@
 import React from "react";
 import "./pageorder.css";
 import { Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 function Pageorder({ model, title, des }) {
   return (
@@ -12,13 +13,13 @@ function Pageorder({ model, title, des }) {
             <h3>{model}</h3>
             <h2>{title}</h2>
             <br />
-            <a href="#" className="footerbuynow">
+            <Link to="/account" className="footerbuynow">
               Buy Now
-            </a>
+            </Link>
             <br />
-            <a href="#" className="footercustomorder">
+            <Link to="/account" className="footercustomorder">
               Custom Order
-            </a>
+            </Link>
           </div>
         </Slide>
         <Slide triggerOnce direction="right" fraction={"0"} duration="600">

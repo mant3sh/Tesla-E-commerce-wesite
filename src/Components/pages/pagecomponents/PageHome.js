@@ -1,6 +1,7 @@
 import React from "react";
 import "./pagehome.css";
 import { Fade } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 function PageHome({ title, image, model, range, pickup, topspeed, peakpower }) {
   return (
@@ -44,9 +45,9 @@ function PageHome({ title, image, model, range, pickup, topspeed, peakpower }) {
             <p>Peak power</p>
           </div>
           <div className="carbuynowdiv">
-            <a className="carbuynow" href="#">
+            <Link className="carbuynow" to="/account">
               Buy Now
-            </a>
+            </Link>
           </div>
         </Fade>
       </div>

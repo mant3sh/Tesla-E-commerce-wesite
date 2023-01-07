@@ -19,6 +19,8 @@ import Cartorder from "./Components/pages/pagecomponents/Cartorder";
 import Trackorder from "./Components/pages/pagecomponents/Trackorder";
 import Myaccount from "./Components/pages/pagecomponents/Myaccount";
 import Paymentpage from "./Components/pages/pagecomponents/Paymentpage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -61,6 +63,7 @@ function App() {
           <Route path="payment" element={<Paymentpage />} />
         </Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

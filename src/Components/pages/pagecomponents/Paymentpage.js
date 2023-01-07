@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { removeFromCart } from "../../../redux/slices/cartSlice";
 import { useNavigate } from "react-router-dom";
 import { orderService } from "../../../service/orderService";
+import { toast } from "react-toastify";
 function Paymentpage() {
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
@@ -20,6 +21,16 @@ function Paymentpage() {
     const update = await orderService
       .placeOrder(user, item)
       .catch((err) => console.log(err.message));
+    toast.success("Your order is placed", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
     dispatch(removeFromCart());
 
     navigate("/account/trackorder");
@@ -38,16 +49,16 @@ function Paymentpage() {
         <>
           <div className="payment__header">
             <span>
-              {item.items.name} {`(${item.items.model},${item.items.color})`}
+              {item.items?.name} {`(${item.items?.model},${item.items?.color})`}
             </span>{" "}
-            <span>$ {tellAmout(item.items)}</span>
+            <span>$ {item.items && tellAmout(item.items)}</span>
           </div>
-          {item.items.autopliot && (
+          {item.items?.autopliot && (
             <div className="payment__header">
               <span>Add on Autoploit</span> <span>$ {6000}</span>
             </div>
           )}
-          {item.items.premium && (
+          {item.items?.premium && (
             <div className="payment__header">
               <span>Premium Package</span> <span>$ {15000}</span>
             </div>

@@ -5,6 +5,7 @@ import {
   collection,
   serverTimestamp,
   doc,
+  deleteDoc,
 } from "firebase/firestore";
 
 class OrderService {
@@ -26,6 +27,10 @@ class OrderService {
     };
     const reff = collection(db, "user", user.uid, "orders");
     return addDoc(reff, myorder);
+  };
+  cancelOrder = (user, id) => {
+    const finddoc = doc(db, "user", user.uid, "orders", id);
+    return deleteDoc(finddoc);
   };
 }
 

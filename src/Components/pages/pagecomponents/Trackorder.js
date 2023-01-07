@@ -3,6 +3,8 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, orderBy, query } from "firebase/firestore";
 import { db } from "../../../firebaseconfig";
 import { useSelector } from "react-redux";
+import Ordercard from "./Ordercard";
+import "./trackorder.css";
 
 function Trackorder() {
   const user = useSelector((state) => state.user);
@@ -12,10 +14,30 @@ function Trackorder() {
 
   return (
     <div>
-      {orders.docs.map((doc) => (
-        <div key={doc.id}> {JSON.stringify(doc.data())} </div>
-      ))}
-      hello
+      <div className="orders__wrapper">
+        <br />
+        <br />
+        {loading && <h2>Loading....</h2>}
+        {orders?.docs.length === 0 && (
+          <h2>No Orders yet Please order your car .</h2>
+        )}
+        {orders?.docs.length !== 0 && <h2>Your orders.</h2>}
+        <br />
+        {orders?.docs.map((doc) => (
+          <>
+            <div key={doc.id}>
+              {" "}
+              <Ordercard
+                order={doc.data().order}
+                ammout={doc.data().ammout}
+                timeStamp={doc.data().timeStamp}
+                id={doc.id}
+              />
+            </div>
+            <hr />
+          </>
+        ))}
+      </div>
     </div>
   );
 }

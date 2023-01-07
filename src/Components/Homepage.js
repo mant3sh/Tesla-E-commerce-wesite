@@ -1,5 +1,6 @@
 import React from "react";
 import { Fade, Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 import "./Homepage.css";
 
 function Homepage({ title, image, notcar, des, acc }) {
@@ -29,13 +30,17 @@ function Homepage({ title, image, notcar, des, acc }) {
 
       <div className="homepage__buttons">
         <Slide direction="left" duration={700} fraction={`0`}>
-          <button className="white">Buy Now</button>
+          <Link to="/account" className="white">
+            Buy Now
+          </Link>
         </Slide>
 
         {!acc && (
           <Slide direction="right" duration={700} fraction={`0`}>
             {" "}
-            <button className="black">Custom Order</button>{" "}
+            <Link to="/account" className="black">
+              Custom Order
+            </Link>{" "}
           </Slide>
         )}
       </div>
