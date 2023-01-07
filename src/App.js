@@ -18,6 +18,7 @@ import Account from "./Components/pages/Account";
 import Cartorder from "./Components/pages/pagecomponents/Cartorder";
 import Trackorder from "./Components/pages/pagecomponents/Trackorder";
 import Myaccount from "./Components/pages/pagecomponents/Myaccount";
+import Paymentpage from "./Components/pages/pagecomponents/Paymentpage";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -57,6 +58,7 @@ function App() {
           <Route path="cartorder" element={<Cartorder />} />
           <Route path="trackorder" element={<Trackorder />} />
           <Route path="myaccount" element={<Myaccount />} />
+          <Route path="payment" element={<Paymentpage />} />
         </Route>
       </Routes>
     </div>

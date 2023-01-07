@@ -1,0 +1,67 @@
+.payment__header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.payment__header>span {
+    cursor: pointer;
+}
+
+.shipping__details {
+    padding: 10px;
+}
+
+.checkbox {
+    display: flex;
+    padding: 5px;
+    gap: 10px;
+}
+
+.finalpay {
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: large;
+
+}
+
+form {
+    width: 80%;
+    margin-inline: auto;
+    border: 1px solid #393c41;
+    border-radius: 6px;
+}
+
+.label {
+    color: #5c5e62;
+    padding-block: 10px;
+}
+
+.login_deatils {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: none;
+    color: #393c41;
+    border-radius: 4px;
+    font-weight: 600;
+
+}
+
+.shipping__details>p {
+    color: inherit;
+
+}
+
+.block__pay {
+    background-color: #4f46e5;
+    color: #ffff;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}

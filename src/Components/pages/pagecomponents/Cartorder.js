@@ -7,8 +7,10 @@ import {
   calAmmout,
   addAddon,
 } from "../../../redux/slices/cartSlice";
+import { useNavigate } from "react-router-dom";
 function Cartorder() {
   const [car, setCar] = useState(null);
+  const navigate = useNavigate();
   const [color, setcolor] = useState(null);
   const [model, setModel] = useState(null);
   const [autopilot, setAutopilot] = useState(false);
@@ -35,6 +37,7 @@ function Cartorder() {
   const handelCal = () => {
     dispatch(addAddon({ autopilot, premium }));
     dispatch(calAmmout());
+    navigate("/account/payment");
   };
 
   return (
@@ -245,7 +248,7 @@ function giveDes(name) {
       return modely;
   }
 }
-function tellAmout(item) {
+export function tellAmout(item) {
   switch (item.name) {
     case "ModelS":
       if (item.model == "AWD") {
