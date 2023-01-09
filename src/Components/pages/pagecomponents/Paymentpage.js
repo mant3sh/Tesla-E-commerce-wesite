@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { orderService } from "../../../service/orderService";
 import { toast } from "react-toastify";
 function Paymentpage() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const item = useSelector((state) => state.cart);
