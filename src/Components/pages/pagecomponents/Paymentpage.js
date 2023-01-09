@@ -53,7 +53,7 @@ function Paymentpage() {
             </span>{" "}
             <span>$ {item.items && tellAmout(item.items)}</span>
           </div>
-          {item.items?.autopliot && (
+          {item.items?.autopilot && (
             <div className="payment__header">
               <span>Add on Autoploit</span> <span>$ {6000}</span>
             </div>
